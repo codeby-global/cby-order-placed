@@ -19,6 +19,9 @@ const ProductAttachment: FC<Props> = ({ product }) => {
   return (
     <Fragment>
       {attachments.map((attachmentItem) => {
+        if (attachmentItem.name === 'Personalization') {
+          return
+        }
         let content: string[]
         let titleLabel: string | ReactNode
         let toggleLabel: string | ReactNode
